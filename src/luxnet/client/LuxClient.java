@@ -1,3 +1,7 @@
+package luxnet.client;
+
+import luxnet.net.LuxAddress;
+import luxnet.net.LuxPacket;
 import java.io.*;
 import java.net.*;
 
@@ -25,7 +29,7 @@ public class LuxClient {
 
     public static void main(String[] args) throws IOException {
         LuxAddress dest = LuxAddress.fromString("lux.1.2.3");
-        byte[] data = "Bonjour depuis LuxClient".getBytes();
+        byte[] data = "Bonjour depuis luxnet.client.LuxClient".getBytes();
         LuxPacket packet = new LuxPacket(dest, 80, data);
 
         LuxClient client = new LuxClient("localhost", 9000);

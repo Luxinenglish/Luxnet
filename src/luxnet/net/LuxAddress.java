@@ -1,3 +1,5 @@
+package luxnet.net;
+
 public class LuxAddress {
     private int part1;
     private int part2;

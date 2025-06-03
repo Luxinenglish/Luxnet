@@ -1,3 +1,4 @@
+package luxnet.net;
 import java.nio.ByteBuffer;
 
 public class LuxPacket {

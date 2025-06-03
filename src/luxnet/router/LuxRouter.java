@@ -1,3 +1,7 @@
+package luxnet.router;
+
+import luxnet.net.LuxPacket;
+
 import java.io.*;
 import java.net.*;
 
@@ -10,7 +14,7 @@ public class LuxRouter {
 
     public void start() throws IOException {
         ServerSocket serverSocket = new ServerSocket(listenPort);
-        System.out.println("LuxRouter démarré sur le port " + listenPort);
+        System.out.println("luxnet.router.LuxRouter démarré sur le port " + listenPort);
 
         while(true) {
             Socket client = serverSocket.accept();
@@ -41,7 +45,7 @@ public class LuxRouter {
             System.out.println("Données : " + new String(packet.getData()));
 
             // Pour l’instant on renvoie juste un ACK simple
-            out.write("ACK LuxRouter".getBytes());
+            out.write("ACK luxnet.router.LuxRouter".getBytes());
 
         } catch(IOException e) {
             e.printStackTrace();
